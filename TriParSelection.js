@@ -5,8 +5,8 @@ for (let i = 0; i < array.length; i++) {
         if (array[j] < min) {
             min = array[j];
         }
-        array.splice(array.indexOf(min), 1);
-        array.splice(array[i], 0, min);
-    }    
+        array[array.indexOf(min)] = array[i];
+        array[i] = min;
+    }
 }
 console.log(array);
